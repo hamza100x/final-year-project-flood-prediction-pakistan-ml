@@ -1,0 +1,30 @@
+{% extends 'main/header.html' %}
+    {% block title %}Home{% endblock %}
+
+    {% block content %}
+{% load static %}
+<!-- Slide 1 (#38) -->
+    <section class="slide fade-6 kenBurns">
+        <div class="content">
+            <div class="container">
+                <div class="wrap">
+                    <div class="fix-14-12">
+
+                        <p class="margin-top-1 ae-3">
+                            <span class="opacity-8">
+                                <h3>Flood prediction using machine learning with the help of Google earth engine</h3>
+                                <br>
+                                
+                            </span>
+                        </p>
+                        <div class="fix-4-12">
+                            <a class="button wide blue gradient ae-10 margin-top-1 cropBottom" href="/index2"><b style="font-family:roboto;color:white;font-size: medium;">Get Started</b></a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="background" style="background-image:url(assets/img/background/img-38.jpg)"></div> -->
+        <div class="background" style="background-image:url({% static 'main/assets/img/background/4c.jpg' %})"></div>
+    </section>
+{% endblock %}

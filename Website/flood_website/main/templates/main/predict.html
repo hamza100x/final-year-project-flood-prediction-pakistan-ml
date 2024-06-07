@@ -1,0 +1,96 @@
+{% extends 'main/index3.html' %}
+    {% block title %}Prediction{% endblock %}
+
+    {% block content %}
+{% load static %}
+<!-- Slide 2 (#55) -->
+<link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+<div class="container" style="margin-top:10%;">
+  <div class="singleBox" style=" opacity: 0.9;">
+    <section class="icon">
+      {% if prov == 1 %}
+      <img src="{% static 'main\images\Punjab.png'%}" style="width:200px;height:200px;">
+      <p class="boxText" style="font-weight:bold;color:black;margin-left: 33%;"> Punjab</p>
+      {% elif prov == 2 %}
+      <img src="{% static 'main\images\Sindh.png'%}" style="width:200px;height:200px;">
+      <p class="boxText" style="font-weight:bold;color:black;margin-left: 33%;">Sindh</p>
+      {% elif prov == 3 %}
+      <img src="{% static 'main\images\Kpk.png'%}" style="width:200px;height:200px;">
+      <p class="boxText" style="font-weight:bold;color:black;margin-left: 33%;">KPK</p>
+      {% elif prov == 4 %}
+      <img src="{% static 'main\images\Bal.png'%}" style="width:200px;height:200px;">
+      <p class="boxText" style="font-weight:bold;color:black;margin-left: 33%;">Balochistan</p>
+      {% elif prov == 5 %}
+      <img src="{% static 'main\images\Gilgit.png'%}" style="width:200px;height:200px;">
+      <p class="boxText" style="font-weight:bold;color:black;margin-left: 33%;">Gilgit</p>
+      {% else %}
+      <img src="{% static 'main\images\Federal.png'%}" style="width:200px;height:200px;">
+      <p class="boxText" style="font-weight:bold;color:black;margin-left: 33%;">Federal</p>
+      {% endif %}
+      <span style="font-weight:bold;color:black;margin-left: 15%;">{{date}}</span>
+    </section>
+    </div>
+  <div class="boxContainer" style=" opacity: 0.8;">
+    <div class="singleBigBox">
+      <section class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-cloud-lightning-rain red" viewBox="0 0 16 16">
+            <path d="M2.658 11.026a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-7.5 1.5a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm9.5 0a.5.5 0 0 1 .316.632l-.5 1.5a.5.5 0 1 1-.948-.316l.5-1.5a.5.5 0 0 1 .632-.316zm-.753-8.499a5.001 5.001 0 0 0-9.499-1.004A3.5 3.5 0 1 0 3.5 10H13a3 3 0 0 0 .405-5.973zM8.5 1a4 4 0 0 1 3.976 3.555.5.5 0 0 0 .5.445H13a2 2 0 0 1 0 4H3.5a2.5 2.5 0 1 1 .605-4.926.5.5 0 0 0 .596-.329A4.002 4.002 0 0 1 8.5 1zM7.053 11.276A.5.5 0 0 1 7.5 11h1a.5.5 0 0 1 .474.658l-.28.842H9.5a.5.5 0 0 1 .39.812l-2 2.5a.5.5 0 0 1-.875-.433L7.36 14H6.5a.5.5 0 0 1-.447-.724l1-2z"/>
+          </svg>
+      </section>
+      <!-- icon -->
+      <p class="boxText" style="font-weight:bold; color:black;">Flood Prediction</p>
+      <p class="boxText" style="color:black;" >&nbsp{{flood}}</p>
+    </div>
+    <!-- displaying all boxes -->
+    <div class="allBoxes" style=" opacity: 0.8;">
+      <div class="singleBox">
+        <section class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-thermometer yellow" viewBox="0 0 16 16">
+                <path d="M8 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                <path d="M8 0a2.5 2.5 0 0 0-2.5 2.5v7.55a3.5 3.5 0 1 0 5 0V2.5A2.5 2.5 0 0 0 8 0zM6.5 2.5a1.5 1.5 0 1 1 3 0v7.987l.167.15a2.5 2.5 0 1 1-3.333 0l.166-.15V2.5z"/>
+              </svg>            </section>
+
+        <!-- icon -->
+        <p class="boxText" style="font-weight:bold;color:black;">Temperature(C)</p>
+        <p class="boxText" style="color:black;">&nbsp{{temp}}</p>
+      </div>
+      <div class="singleBox">
+        <section class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="blue bi bi-moisture" viewBox="0 0 16 16">
+                <path d="M13.5 0a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V7.5h-1.5a.5.5 0 0 0 0 1H15v2.75h-.5a.5.5 0 0 0 0 1h.5V15h-1.5a.5.5 0 0 0 0 1h2a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5h-2zM7 1.5l.364-.343a.5.5 0 0 0-.728 0l-.002.002-.006.007-.022.023-.08.088a28.458 28.458 0 0 0-1.274 1.517c-.769.983-1.714 2.325-2.385 3.727C2.368 7.564 2 8.682 2 9.733 2 12.614 4.212 15 7 15s5-2.386 5-5.267c0-1.05-.368-2.169-.867-3.212-.671-1.402-1.616-2.744-2.385-3.727a28.458 28.458 0 0 0-1.354-1.605l-.022-.023-.006-.007-.002-.001L7 1.5zm0 0-.364-.343L7 1.5zm-.016.766L7 2.247l.016.019c.24.274.572.667.944 1.144.611.781 1.32 1.776 1.901 2.827H4.14c.58-1.051 1.29-2.046 1.9-2.827.373-.477.706-.87.945-1.144zM3 9.733c0-.755.244-1.612.638-2.496h6.724c.395.884.638 1.741.638 2.496C11 12.117 9.182 14 7 14s-4-1.883-4-4.267z"/>
+              </svg>
+        </section>
+
+        <!-- icon -->
+        <p class="boxText" style="font-weight:bold;color:black;">Precipitation</p>
+        <p class="boxText" style="color:black;">&nbsp{{rain}}</p>
+      </div>
+      <div class="singleBox">
+        <section class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="green bi bi-tree" viewBox="0 0 16 16">
+                <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
+              </svg>
+        </section>
+
+        <!-- icon -->
+        <p class="boxText" style="font-weight:bold;color:black;">Vegetation</p>
+        <p class="boxText" style="color:black;">&nbsp{{veg}}</p>
+      </div>
+      <div class="singleBox">
+        <section class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="white bi bi-snow" viewBox="0 0 16 16">
+                <path d="M8 16a.5.5 0 0 1-.5-.5v-1.293l-.646.647a.5.5 0 0 1-.707-.708L7.5 12.793V8.866l-3.4 1.963-.496 1.85a.5.5 0 1 1-.966-.26l.237-.882-1.12.646a.5.5 0 0 1-.5-.866l1.12-.646-.884-.237a.5.5 0 1 1 .26-.966l1.848.495L7 8 3.6 6.037l-1.85.495a.5.5 0 0 1-.258-.966l.883-.237-1.12-.646a.5.5 0 1 1 .5-.866l1.12.646-.237-.883a.5.5 0 1 1 .966-.258l.495 1.849L7.5 7.134V3.207L6.147 1.854a.5.5 0 1 1 .707-.708l.646.647V.5a.5.5 0 1 1 1 0v1.293l.647-.647a.5.5 0 1 1 .707.708L8.5 3.207v3.927l3.4-1.963.496-1.85a.5.5 0 1 1 .966.26l-.236.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.883.237a.5.5 0 1 1-.26.966l-1.848-.495L9 8l3.4 1.963 1.849-.495a.5.5 0 0 1 .259.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.236.883a.5.5 0 1 1-.966.258l-.495-1.849-3.4-1.963v3.927l1.353 1.353a.5.5 0 0 1-.707.708l-.647-.647V15.5a.5.5 0 0 1-.5.5z"/>
+              </svg>
+        </section>
+
+        <!-- icon -->
+        <p class="boxText" style="font-weight:bold;color:black;">Snow</p>
+        <p class="boxText"style="color:black;">&nbsp{{snow}}</p>
+        <p class></p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+  {% load static %}
+	<!-- Page Title -->
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'main/css/style.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+  <!-- Favicon icon -->
+  <link rel="shortcut icon" href="{% static 'main/images/favicon.ico' %}" />
+<!-- Custom Styles -->
+<!-- <link href="css/custom.css" rel="stylesheet" type="text/css"> -->
+<!-- Custom Scripts -->
+<!-- <script src="js/custom.js" type="text/javascript"></script> -->    
+  <!-- My navbar -->
+    <link href="{% static 'main/css/materialize.css' %}" rel="stylesheet"/>
+		<!-- For icon in menu -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="{% static 'main/js/materialize.min.js' %}"></script>
+</head>
+<body class="slides film noPreload animated" style="background-image:url({% static 'main\assets\img\background\a.jpeg' %});background-size: cover;background-position: center;background-repeat: no-repeat;height: 100%;" >
+		
+<!-- Panel Top #library/panel/panel-top-15.html -->
+<!-- This file messaging.html handles the toast which appears on screen whenever error encounters -->
+{% include 'main/includes/messaging.html' %}
+
+{% include 'main/includes/navbar.html' %}
+
+{% block content %}
+
+{% endblock %}
+
+<script type="text/javascript">M.AutoInit();</script>
+
+</body>
+</html>

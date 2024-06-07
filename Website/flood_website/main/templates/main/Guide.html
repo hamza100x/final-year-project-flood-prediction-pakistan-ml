@@ -1,0 +1,37 @@
+{% extends 'main/header.html' %}
+    {% block title %}Guide{% endblock %}
+
+    {% block content %}
+		<center><h1>{{pagename}}</h1></center>
+    <div class="container"> 
+        {% load static %}   
+		<h3>Welcome</h3>
+        <p>This is a Flood Prediction System. Our system allows you to predict flood, rainfall(mm), snowfall, vegetation, temperature(C).</p>
+        <h4>Steps:</h4>
+        <p>
+            <ol>
+                <li>1. To get started, click "Get Started" on the homepage.</li>
+                <li>2. Enter the year of the future.</li>
+                <li>3. Select the month of corresponding year.</li>
+                <li>4. Select the Province.</li>
+                <li>5. Press the "Predict" button.</li>
+            </ol>
+        </p>
+        <img class="responsive-img" src="{% static 'main/images/1.png' %}"><br><br>
+        <img class="responsive-img" src="{% static 'main/images/2.png' %}"><br><br>
+        <img class="responsive-img" src="{% static 'main/images/3.png' %}"><br><br>
+        <img class="responsive-img" src="{% static 'main/images/4.png' %}"><br><br>
+    
+        <h4>Result :</h4>
+        <p>
+            <ol>
+                <li>1. You will be provided with the result page.</li>
+                <li>2. You will be provided with the prediction of flood, rainfall(mm), snowfall, vegetation, temperature(C).</li>
+                
+            </ol>
+        </p>
+        <img class="responsive-img" src="{% static 'main/images/5.png' %}"><br><br>
+        <img class="responsive-img" src="{% static 'main/images/6.png' %}"><br><br>
+    </div>
+        {% endblock %}
+        <body class="slides film noPreload animated" style="background-image:url({% static 'main\assets\img\background\a.jpeg' %})">

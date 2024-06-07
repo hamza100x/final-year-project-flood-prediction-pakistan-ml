@@ -1,0 +1,108 @@
+{% extends 'main/header.html' %}
+{% block title %}About us | Developers!{% endblock %}
+    {% block content %}
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}</style>
+
+        <div class="w3-light-grey">
+
+            <!-- w3-content defines a container for fixed size centered content,
+            and is wrapped around the whole page content, except for the footer in this example -->
+            <div class="w3-content" style="max-width:1400px">
+
+            <!-- Header -->
+            <header class="w3-container w3-center w3-padding-32">
+              <h1><b>About Us</b></h1>
+              <p>Welcome to the blog of <span class="w3-tag">Developers</span></p>
+            </header>
+
+            <!-- Grid -->
+            <div class="w3-row">
+
+            <!-- Blog entries -->
+            <div class="w3-col l8 s12">
+              <!-- Blog entry -->
+              <div class="w3-card-4 w3-margin w3-white">
+                  {% load static %}
+                <img src="{% static 'main/images/rain.jpg' %}" alt="Nature" style="width:100%;height:30%;">
+                <div class="w3-container">
+                  <h3><b>THIS PROJECT</b></h3>
+                  <h5>Introduction to idea, <span class="w3-opacity">July 5, 2019</span></h5>
+                </div>
+
+                <div class="w3-container">
+                  <p> Floods are certainly the most devastating natural disasters, hitting numerous regions in the world each year. During the last decades, the trend in flood damages has increased exponentially. Floods are one of the most devastating natural disasters frequently experienced in Pakistan. In a nutshell, underdeveloped countries are the most vulnerable to floods, causing damages that impact the national GDP. Floods are a threat to animal and human habitats and lives. We need to accept and come to terms with human actions, causing the earth to warm up unnaturally and unsustainable.
+                      </p>
+                  <div class="w3-row">
+                  
+                    
+                  </div>
+                </div>
+              </div>
+              <hr>
+
+                          <!-- END BLOG ENTRIES -->
+            </div>
+
+            <!-- Introduction menu -->
+            <div class="w3-col l4">
+              <!-- About Card -->
+              <div class="w3-card w3-margin w3-margin-top">
+                  <!-- {% static 'main/images/img1.jpg' %} -->
+              <img src="" style="width:100%">
+                <div class="w3-container w3-white">
+                  <h4><b>Team</b></h4>
+                  <p>Just we, exploring the universe of Django. We have a heart of love and a interest of Web Development and Data Analysis. We want to share our world with you.</p>
+                </div>
+              </div><hr>
+              <div class="w3-card w3-margin">
+                <div class="w3-container w3-padding">
+                  <h4>Supervisor</h4>
+                </div>
+                <ul class="w3-ul w3-hoverable w3-white">
+                  <li class="w3-padding-16">
+                    <img src="{% static 'main/images/hod.webp' %}" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                    <span class="w3-large">Dr. Kaleem Razzaq</span><br>
+                    <span>Head Of Department (CS)</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Posts -->
+                <div class="w3-card w3-margin">
+                  <div class="w3-container w3-padding">
+                    <h4>Developers</h4>
+                  </div>
+                  <ul class="w3-ul w3-hoverable w3-white">
+                    <li class="w3-padding-16">
+                      <img src="{% static 'main/images/ahmad.jpeg' %}" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                      <span class="w3-large">Muhammad Ahmad Ali</span><br>
+                      <span>BSCS-F-18</span>
+                    </li>
+                    <li class="w3-padding-16">
+                      <img src="{% static 'main/images/adnan.jpeg' %}" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                      <span class="w3-large">Muhammad Adnan Ameen</span><br>
+                      <span>BSCS-F-18</span>
+                    </li>
+                    <li class="w3-padding-16">
+                      <img src="{% static 'main/images/hamza.jpeg' %}" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+                      <span class="w3-large">Hamza Danish</span><br>
+                      <span>BSCS-F-18</span>
+                    </li>
+                  </ul>
+                </div>
+              <hr>
+
+            <!-- END Introduction Menu -->
+            </div>
+
+            <!-- END GRID -->
+            </div><br>
+
+            <!-- END w3-content -->
+            </div>
+
+        </div>
+
+{% endblock %}
