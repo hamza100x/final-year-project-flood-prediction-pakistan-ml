@@ -42,7 +42,7 @@ The study area is Islamic Republic of Pakistan a country in South Asia.Highlight
 ## Threshold
 
 The following Table shows the value of Threshold values that we have used in our project. Threshold values have been stetted by taking the average precipitation of the months in which flood has occurred.
-## R-squared Scores
+
 
 Province | Temperature | Precipitation | NDSI | NDVI
 --- | --- | --- | --- | ---
