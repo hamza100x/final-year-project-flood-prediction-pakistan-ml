@@ -22,9 +22,7 @@ The main contribution of this project is to demonstrate how machine learning mod
 - Decision Tree Regressor
 - Support Vector Regression (SVR)
 - Random Forest Regression
-## Study Area
 
-The study area is Islamic Republic of Pakistan a country in South Asia.Highlighted geometries of Pakistan.![Picture](https://github.com/hamza100x/final-year-project-flood-prediction-pakistan-ml/assets/57902630/ef2b4ad2-2bab-46e9-8a42-7805f78984a8)
 
 
 ## System Architecture
